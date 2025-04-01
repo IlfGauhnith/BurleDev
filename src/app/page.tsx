@@ -26,7 +26,6 @@ export default function Home() {
         <Box className="bg-[#CA803A] p-9 rounded-2xl mt-60">
           <p className="text-xl mb-2">Bless the Maker and His water. I am</p>
           <h1 className={`${fjallaOne.className} text-7xl text-[#fccc8e] mb-6 mt-6 pl-10`}>Lucas Burle,</h1>
-          <h2></h2>
           <p>
           software engineer, forged in the discipline of computer science,<br/>
           traveler of many code paths. This is my sietch — a place where my works are gathered.<br/>

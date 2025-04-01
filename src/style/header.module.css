@@ -1,0 +1,21 @@
+.sandParticle {
+  position: absolute;
+  
+  pointer-events: none;  /* don't block mouse interactions */
+  animation-name: sandFall;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  
+  z-index: 9999;         /* on top of everything */
+}
+
+@keyframes sandFall {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(var(--random-x, 0)) translateY(var(--random-final-y, 0));
+  }
+}
