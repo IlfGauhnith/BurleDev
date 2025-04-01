@@ -36,6 +36,7 @@ export default function Home() {
             p-6
             pt-4
             mr-5
+            mt-16
             rounded-3xl 
             border-1 
             border-[#CA803A]/50
