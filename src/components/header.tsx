@@ -101,7 +101,7 @@ export default function Header() {
       <Flex align="center" justify="between">
         {/* Left side */}
         <Box className="ml-10">
-          <Image src="/burle-dev-logo.png" alt="BURLE.DEV Logo" width={100} height={100} />
+          <Image src="/burle-dev-logo-orange.png" alt="BURLE.DEV Logo" width={100} height={100} />
         </Box>
 
         {/* Navigation links */}
