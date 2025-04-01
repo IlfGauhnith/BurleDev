@@ -63,7 +63,7 @@ export default function Home() {
             Lucas,
           </h1>
           <p className="text-sm xl:text-lg">
-            also know as Luk'an al-Qatari, he who maps the paths.
+            also know as Luk’an al-Qatari, he who maps the paths.
             I am a software engineer, forged in the discipline of computer science,
             traveler of many code paths. This is my sietch — a place where my
             works are gathered.
