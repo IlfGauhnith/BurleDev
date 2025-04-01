@@ -100,56 +100,91 @@ export default function Header() {
 
       <Flex align="center" justify="between">
         {/* Left side */}
-        <Box className="ml-10">
-          <Image src="/burle-dev-logo-orange.png" alt="BURLE.DEV Logo" width={100} height={100} />
+        <Box className="ml-1 xl:ml-10">
+          <Image 
+            src="/burle-dev-logo-orange.png" 
+            alt="BURLE.DEV Logo" 
+            width={50} 
+            height={50} 
+            className="
+              object-contain
+              h-auto
+
+              xl:w-[100px]
+            "
+          />
         </Box>
 
         {/* Navigation links */}
         <Flex>
-          <Box className="mr-10">
+          <Box className="
+            mr-5
+            xl:mr-10
+          ">
             <a
               onMouseEnter={handleMouseEnter}
               className="
                 font-extrabold 
-                text-lg 
+                text-xs
                 text-[#CA803A] 
-                cursor-pointer"
+                cursor-pointer
+                xl:text-lg
+                2xl:text-2xl 
+                "
             >
               About
             </a>
           </Box>
-          <Box className="mr-10">
+          <Box className="
+            mr-5
+            xl:mr-10
+          ">
             <a
               onMouseEnter={handleMouseEnter}
               className="
                 font-extrabold 
-                text-lg 
+                text-xs 
                 text-[#CA803A] 
-                cursor-pointer"
+                cursor-pointer
+                xl:text-lg
+                2xl:text-2xl 
+              "
             >
               Projects
             </a>
           </Box>
-          <Box className="mr-10">
+          <Box className="
+            mr-5
+            xl:mr-10
+          ">
             <a
               onMouseEnter={handleMouseEnter}
               className="
                 font-extrabold 
-                text-lg 
+                text-xs
                 text-[#CA803A] 
-                cursor-pointer"
+                cursor-pointer
+                xl:text-lg 
+                2xl:text-2xl 
+              "
             >
               Gallery
             </a>
           </Box>
-          <Box className="mr-10">
+          <Box className="
+            mr-5
+            xl:mr-10
+          ">
             <a
               onMouseEnter={handleMouseEnter}
               className="
                 font-extrabold 
-                text-lg 
+                text-xs 
                 text-[#CA803A] 
-                cursor-pointer"
+                cursor-pointer
+                xl:text-lg
+                2xl:text-2xl 
+              "
             >
               Contact
             </a>
@@ -157,10 +192,10 @@ export default function Header() {
         </Flex>
 
         {/* Right side */}
-        <Flex gap="10">
+        <Flex gap="10" className="items-center justify-center">
           <Box
             className="bg-[#CA803A] border-2 border-[#ca8647] shadow
-              mr-6 rounded-xl p-1 transition-transform
+              mr-2 xl:mr-6 rounded-xl p-1 transition-transform
               transform-gpu
               duration-200
               hover:scale-105
@@ -176,7 +211,14 @@ export default function Header() {
                 <Linkedin
                   size={35}
                   color="#501A00"
-                  className="hover:stroke-[#501b0086]"
+                  className="
+                  hover:stroke-[#501b0086]
+                  w-[15px]
+                  h-[15px]
+
+                  xl:w-[35px]
+                  xl:h-[35px]
+                  "
                 />
               </a>
             </Box>
@@ -185,7 +227,7 @@ export default function Header() {
             <Box
               asChild
               className="bg-[#CA803A] border-2 border-[#ca8647] shadow 
-              mr-12 rounded-xl p-1 transition-transform
+              mr-2 xl:mr-12 rounded-xl p-1 transition-transform
               transform-gpu
               duration-200
               hover:scale-105
@@ -198,9 +240,16 @@ export default function Header() {
                 rel="noopener noreferrer"
               >
                 <Github
-                  size={35}
+                  
                   color="#501A00"
-                  className="hover:stroke-[#501b0086]"
+                  className="
+                  hover:stroke-[#501b0086]
+                  w-[15px]
+                  h-[15px]
+
+                  xl:w-[35px]
+                  xl:h-[35px]
+                  "
                 />
               </a>
             </Box>
