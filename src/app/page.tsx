@@ -1,103 +1,72 @@
+import Header from "@/components/header";
+import { Fjalla_One } from 'next/font/google';
+import { Box, Flex } from "@radix-ui/themes";
 import Image from "next/image";
+import {
+  Hammer,
+  Sparkles,
+  User,
+  FileText,
+  SatelliteDish,
+} from 'lucide-react';
+const fjallaOne = Fjalla_One({
+  weight: '400',
+  subsets: ['latin'],
+});
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+    <main
+      className="min-h-screen flex flex-col bg-cover bg-center"
+      style={{ backgroundImage: "url('/marbled-grained-bg.png')" }}
+    >
+      <Header />
+      {/* This Flex fills the remaining space beneath the Header */}
+      <Flex className="flex-1 w-full" align="start" justify="center">
+        <Box className="bg-[#CA803A] p-9 rounded-2xl mt-60">
+          <p className="text-xl mb-2">Bless the Maker and His water. I am</p>
+          <h1 className={`${fjallaOne.className} text-7xl text-[#fccc8e] mb-6 mt-6 pl-10`}>Lucas Burle,</h1>
+          <h2></h2>
+          <p>
+          software engineer, forged in the discipline of computer science,<br/>
+          traveler of many code paths. This is my sietch — a place where my works are gathered.<br/>
+          </p>
+          <p className="font-bold mt-2 mb-2">Welcome.</p>
+          <ul className="space-y-4 mt-3">
+            <li className="flex items-center gap-3">
+              <Hammer className="w-5 h-5 text-yellow-500" />
+              <a href="#projects" className="hover:underline">My Projects</a>Echoes of systems crafted with purpose and precision.
+            </li>
+            <li className="flex items-center gap-3">
+              <Sparkles className="w-5 h-5 text-pink-400" />
+              <a href="#hobbies" className="hover:underline">My Hobbies</a>Passions beyond the spice, where creativity flows freely.
+            </li>
+            <li className="flex items-center gap-3">
+              <User className="w-5 h-5 text-blue-400" />
+              <a href="#about-me" className="hover:underline">About Me</a>The journey, the vision, and the heart behind the code.
+            </li>
+            <li className="flex items-center gap-3">
+              <FileText className="w-5 h-5 text-green-400" />
+              <a href="#curriculum" className="hover:underline">My Curriculum</a>The chronicles of skill, study, and experience.
+            </li>
+            <li className="flex items-center gap-3">
+              <SatelliteDish className="w-5 h-5 text-indigo-400" />
+              <a href="#contact" className="hover:underline">Contact Me</a>Speak, and I shall answer across the vastness of the net.
+            </li>
+          </ul>
+        </Box>
+        <Box className="ml-120 mt-30 rounded-full">
+          <Image id="profile_picture"
+            src="/profile.png"
+            alt="Profile Image"
+            width={600}
+            height={600}
+            className="
+              rounded-full
+            "
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </Box>
+      </Flex>
+    </main>
   );
 }
